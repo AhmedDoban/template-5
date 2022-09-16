@@ -19,17 +19,15 @@ check.addEventListener("click", (ele) => {
 stats
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 let stats_number = document.querySelectorAll(".stats-number");
-let number = [...stats_number];
-for (let i = 0; i < number.length; i++) {
-  let data = +number[i].innerHTML;
+for (let i = 0; i < stats_number.length; i++) {
   let counter = setInterval(function stats() {
-    number[i].innerHTML = data;
-    data += 1;
-    if (data == number[i].dataset.count) {
+    stats_number[i].innerHTML++;
+    if (stats_number[i].innerHTML === stats_number[i].dataset.count) {
       clearInterval(counter);
     }
   }, 1);
 }
+
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 back-to-top
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
