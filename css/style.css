@@ -696,3 +696,45 @@ h6 {
   color: var(--main-p-color);
   font-size: 18px;
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.contact {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--main-background-color);
+}
+.contact iframe {
+  margin-bottom: 40px;
+}
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact .container .left,
+.contact .container .right {
+  flex-basis: 48%;
+}
+.contact .container .left {
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.footer {
+  position: relative;
+  padding-top: calc(var(--main-padding-bottom) / 2);
+  padding-bottom: calc(var(--main-padding-bottom) / 2);
+  background-color: rgb(52, 59, 64);
+  text-align: center;
+}
+.footer h3 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+.footer p {
+  font-size: 12px;
+  color: rgb(195, 193, 193);
+}
