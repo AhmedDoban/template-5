@@ -8,14 +8,12 @@
 }
 :root {
   --main-color: #2dc997;
-  --main-color-hover: #1787e0;
   --main-transition: all 0.5s ease-in-out;
   --main-padding-top: 50px;
   --main-padding-bottom: 50px;
   --main-background-color: #f5f5f5;
   --main-box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   --main-p-color: #777;
-  --main-a-color: #ffe600;
   --main-border: 1px solid var(--main-color);
 }
 html {
@@ -710,14 +708,122 @@ h6 {
 }
 .contact .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.contact .container .left,
-.contact .container .right {
-  flex-basis: 48%;
+  flex-wrap: wrap;
 }
 .contact .container .left {
+  flex-basis: 40%;
+}
+.contact .container .right {
+  flex-basis: 58%;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact left 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.contact .container .left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact .container .left .contact-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contact .container .left .contact-data h1,
+.contact .container .left .contact-data p {
+  font-size: 14px;
+  margin: 0 0 1px 0;
+  color: rgb(48, 48, 48);
+  font-weight: 500;
+}
+.contact .container .left .contact-data i,
+.contact .social-data i {
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: #fff;
+  padding: 20px;
+}
+.contact .social-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.contact .social-data i {
+  background-color: rgb(105, 105, 105);
+  font-size: 18px;
+  padding: 10px;
+}
+.contact .social-data i:hover {
+  background-color: var(--main-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# contact right 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.contact .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contact .container .right input,
+.contact .container .right textarea {
+  padding: 8px;
+  border: none;
+  width: 100%;
+  transition: var(--main-transition);
+  caret-color: var(--main-color);
+}
+.contact .container .right input:focus,
+.contact .container .right textarea {
+  outline: none;
+  transition: var(--main-transition);
+}
+.contact .container .right input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.contact .container .right textarea {
+  resize: none;
+}
+.contact .container .right input[type="submit"] {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 11px 20px;
+  width: fit-content;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.contact .container .right input[type="submit"]:hover {
+  border: var(--main-border);
+  background-color: #fff;
+  color: var(--main-p-color);
+}
+@media (max-width: 772px) {
+  .contact .container {
+    gap: 20px;
+  }
+  .contact .container .right,
+  .contact .container .left {
+    flex: 1;
+    flex-basis: 100%;
+  }
+  .contact .container .left {
+    gap: 20px;
+  }
 }
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 # Footer
